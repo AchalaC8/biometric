@@ -1,74 +1,67 @@
 # Project Requirements: Automated Attendance Notification System
-<p>This project is a Python-based solution designed to automate attendance monitoring and send notifications to students who have not completed their biometric check-in. The system reads daily attendance data from CSV files, identifies absent students, and is configured to send automated alerts.</p>
+<p>This document outlines the functional and non-functional requirements for the Automated Attendance Notification System.</p>
 
-<hr>
+    <h2>1. Functional Requirements</h2>
 
-<h2>Features</h2>
-<ul>
-<li>
-<strong>Daily CSV Processing:</strong> The script dynamically identifies and processes the current day's attendance data from a CSV file (e.g., 01-Jun-2025.csv).
-</li>
-<li>
-<strong>Absentee Identification:</strong> It efficiently filters the data to find all students with a "Not Present" status.
-</li>
-<li>
-<strong>Automated Notifications:</strong> The core function, <code>send_notification</code>, is a placeholder for integrating with a real-world messaging API (like Twilio) to send automated alerts via SMS or email to absent students.
-</li>
-<li>
-<strong>Customizable Logic:</strong> The script can be easily adapted to handle different data formats, notification times, or contact methods.
-</li>
-</ul>
+    <h3>1.1 Data Processing</h3>
+    <ul>
+        <li><strong>RF-1.1.1:</strong> The system SHALL read daily attendance data from a CSV file.</li>
+        <li><strong>RF-1.1.2:</strong> The system SHALL dynamically identify the correct CSV file for the current day based on a consistent naming convention (e.g., `DD-Mon-YYYY.csv`).</li>
+        <li><strong>RF-1.1.3:</strong> The system SHALL be able to parse data with the following columns: `Employee Code`, `Student Name`, `Block`, `Floor`, `Room No.`, `Last Punch`, `Punch Records`, and `Status`.</li>
+    </ul>
 
-<hr>
+    <h3>1.2 Absentee Identification</h3>
+    <ul>
+        <li><strong>RF-1.2.1:</strong> The system SHALL accurately identify all students with a `Status` of "Not Present".</li>
+        <li><strong>RF-1.2.2:</strong> The system SHALL also identify students who have `Last Punch` after a specified time threshold (e.g., 8:45 PM) as "Late".</li>
+    </ul>
 
-<h2>How It Works</h2>
-<p>The script is intended to be executed once daily by a scheduling tool (such as cron on Linux/macOS or Task Scheduler on Windows) at a predetermined time.</p>
-<ol>
-<li>The <code>check_for_absent_students()</code> function is called.</li>
-<li>It constructs the expected filename for the current date.</li>
-<li>It reads the corresponding CSV file into a pandas DataFrame.</li>
-<li>The DataFrame is filtered to find all rows where the <code>Status</code> is 'Not Present'.</li>
-<li>It then iterates through the list of absent students.</li>
-<li>For each absent student, the <code>send_notification()</code> function is triggered. In this current version, it prints a message to the console, but this is where you would integrate your messaging API to send a real notification.</li>
-</ol>
+    <h3>1.3 Reporting</h3>
+    <ul>
+        <li><strong>RF-1.3.1:</strong> The system SHALL generate an Excel file (`.xlsx`) containing multiple sheets for different reports.</li>
+        <li><strong>RF-1.3.2:</strong> The Excel file SHALL include a sheet named "Daily Summary" with a count of total students, present students, absent students, and late students.</li>
+        <li><strong>RF-1.3.3:</strong> The Excel file SHALL include a sheet named "Students to Notify" listing the details of all absent students.</li>
+        <li><strong>RF-1.3.4:</strong> The Excel file SHALL include a sheet named "Late Biometric Punches" listing students who checked in late.</li>
+        <li><strong>RF-1.3.5:</strong> The Excel file SHALL include a sheet named "Present Students per Room" listing the names of present students, sorted by Block, Floor, and Room.</li>
+        <li><strong>RF-1.3.6:</strong> The Excel file SHALL include a sheet named "Absent Students per Room" listing the names of absent students, sorted by Block, Floor, and Room.</li>
+    </ul>
 
-<hr>
+    <h3>1.4 Notification</h3>
+    <ul>
+        <li><strong>RF-1.4.1:</strong> The system SHALL send an automated notification to each student identified as "Not Present".</li>
+        <li><strong>RF-1.4.2:</strong> The system SHALL support integration with a third-party messaging API (e.g., Twilio) for sending SMS or email alerts.</li>
+        <li><strong>RF-1.4.3:</strong> The notification content SHALL be configurable and include relevant details such as the student's name and a reminder message.</li>
+    </ul>
 
-<h2>Setup and Usage</h2>
-<p>To use this script, you need to have the necessary Python libraries installed.</p>
+    <hr>
 
-<h3>Prerequisites</h3>
-<p>You can install the required library using <code>pip</code>:</p>
-<pre><code>pip install pandas</code></pre>
+    <h2>2. Non-Functional Requirements</h2>
 
-<h3>Configuration</h3>
-<ol>
-<li>
-<strong>Attendance Data:</strong> Ensure your daily attendance data is in a CSV file named in the DD-Mon-YYYY.csv format (e.g., 13-Sep-2025.csv).
-</li>
-<li>
-<strong>Contact Information:</strong> To send real notifications, you would need to add a column with student contact information (e.g., Phone Number or Email) to your CSV files.
-</li>
-<li>
-<strong>API Integration:</strong> To send actual notifications, you must replace the placeholder code in the <code>send_notification</code> function with the logic for your chosen messaging API (e.g., Twilio, SendGrid). You will need to obtain an API key and follow their documentation.
-</li>
-</ol>
+    <h3>2.1 Performance</h3>
+    <ul>
+        <li><strong>RN-2.1.1:</strong> The system SHALL process and generate the reports within 30 seconds for a file containing up to 500 records.</li>
+    </ul>
 
-<h3>Running the Script</h3>
-<p>This script is designed to be run as a scheduled task, but you can also run it manually from your terminal:</p>
-<pre><code>python notification_system.py</code></pre>
+    <h3>2.2 Reliability and Availability</h3>
+    <ul>
+        <li><strong>RN-2.2.1:</strong> The system SHALL be scheduled to run once daily at a specific, predetermined time (e.g., 8:45 PM).</li>
+        <li><strong>RN-2.2.2:</strong> The system SHALL handle cases where the daily CSV file is not present without crashing, and instead, log an appropriate message.</li>
+    </ul>
 
-<hr>
+    <h3>2.3 Security</h3>
+    <ul>
+        <li><strong>RN-2.3.1:</strong> The system SHALL handle sensitive API keys and credentials securely.</li>
+        <li><strong>RN-2.3.2:</strong> The system SHALL protect student data (e.g., phone numbers, names) by ensuring it is not publicly exposed in logs or reports beyond what is necessary for the intended function.</li>
+    </ul>
 
-<h2>Potential Enhancements</h2>
-<ul>
-<li>
-<strong>Database Integration:</strong> Instead of reading from a CSV, connect to a database to handle attendance records, ensuring data consistency and real-time updates.
-</li>
-<li>
-<strong>Error Logging:</strong> Implement a robust logging system to record any errors that occur during the process, such as a missing file or a failed API call.
-</li>
-<li>
-<strong>Multi-Day Analysis:</strong> Modify the script to analyze data across multiple days to identify long-term absenteeism patterns.
-</li>
-</ul>
+    <h3>2.4 Usability</h3>
+    <ul>
+        <li><strong>RN-2.4.1:</strong> The system SHALL not require manual intervention after the initial setup.</li>
+        <li><strong>RN-2.4.2:</strong> The output reports SHALL be clearly organized and easy for administrators to understand.</li>
+    </ul>
+
+    <h3>2.5 Maintainability</h3>
+    <ul>
+        <li><strong>RN-2.5.1:</strong> The code SHALL be well-documented with comments explaining the purpose of functions and key logic.</li>
+        <li><strong>RN-2.5.2:</strong> The code structure SHALL be modular, allowing for easy updates or feature additions (e.g., changing the notification provider).</li>
+    </ul>
