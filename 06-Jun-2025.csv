@@ -1,0 +1,101 @@
+Employee Code,Student Name,Block,Floor,Room No.,Last Punch,Punch Records,Status
+702,STUDENT1,HD2,FifthFloor,502,20:33:19,"20:33:19,",Present
+101,STUDENT2,HC,ThirdFloor,302,,,Not Present
+102,STUDENT3,HD2,FourthFloor,403,,,Not Present
+103,STUDENT4,HD2,FifthFloor,507,,,Not Present
+104,STUDENT5,HC,ThirdFloor,305,,,Not Present
+105,STUDENT6,HD2,SecondFloor,205,,,Not Present
+106,STUDENT7,HD2,FourthFloor,411,,,Not Present
+107,STUDENT8,HD2,ThirdFloor,304,20:18:16,"20:18:16,",Present
+108,STUDENT9,HD2,ThirdFloor,304,20:06:08,"20:06:08,",Present
+109,STUDENT10,HC,ThirdFloor,305,19:50:18,"19:50:18,",Present
+110,STUDENT11,HD2,FourthFloor,408,20:18:19,"20:18:19,",Present
+112,STUDENT12,HD2,FourthFloor,410,,,Not Present
+113,STUDENT13,HC,ThirdFloor,312,,,Not Present
+114,STUDENT14,HC,ThirdFloor,311,,,Not Present
+116,STUDENT15,HC,ThirdFloor,306,,,Not Present
+117,STUDENT16,HD2,FifthFloor,503,,,Not Present
+118,STUDENT17,HD2,SecondFloor,204,,,Not Present
+119,STUDENT18,HD2,FourthFloor,408,,,Not Present
+121,STUDENT19,HC,ThirdFloor,303,,,Not Present
+122,STUDENT20,HC,ThirdFloor,301,19:43:55,"19:43:55,",Present
+123,STUDENT21,HC,ThirdFloor,309,19:44:05,"19:44:05,",Present
+124,STUDENT22,HD2,FourthFloor,411,19:43:57,"19:43:57,",Present
+125,STUDENT23,HD2,FifthFloor,503,,,Not Present
+127,STUDENT24,HD2,FourthFloor,401,19:55:05,"19:55:05,",Present
+128,STUDENT25,HC,ThirdFloor,310,19:55:02,"19:55:02,",Present
+129,STUDENT26,HC,ThirdFloor,311,20:08:47,"20:08:47,",Present
+130,STUDENT27,HC,ThirdFloor,301,19:44:08,"19:44:08,",Present
+131,STUDENT28,HC,SecondFloor,214,19:27:58,"19:27:58,",Present
+132,STUDENT29,HD2,SecondFloor,204,19:44:02,"19:44:02,",Present
+134,STUDENT30,HB,SecondFloor,208,19:37:59,"19:37:59,",Present
+135,STUDENT31,HD2,ThirdFloor,307,,,Not Present
+136,STUDENT32,HD2,FourthFloor,401,19:54:50,"19:54:50,",Present
+138,STUDENT33,HC,ThirdFloor,311,19:54:55,"19:54:55,",Present
+139,STUDENT34,HC,ThirdFloor,301,,,Not Present
+140,STUDENT35,HC,ThirdFloor,303,19:37:56,"19:37:56,",Present
+141,STUDENT36,HC,ThirdFloor,306,19:45:06,"19:45:06,",Present
+142,STUDENT37,HD2,FourthFloor,411,19:45:01,"19:45:01,",Present
+143,STUDENT38,HC,ThirdFloor,310,19:45:03,"19:45:03,",Present
+144,STUDENT39,HC,ThirdFloor,304,20:08:18,"20:08:18,",Present
+146,STUDENT40,HD2,FourthFloor,404,19:51:09,"19:51:09,",Present
+147,STUDENT41,HC,ThirdFloor,305,,,Not Present
+148,STUDENT42,HB,SecondFloor,208,19:49:35,"19:49:35,",Present
+149,STUDENT43,HC,ThirdFloor,310,19:23:04,"19:23:04,",Present
+150,STUDENT44,HC,ThirdFloor,309,20:05:42,"20:05:42,",Present
+151,STUDENT45,HD2,SecondFloor,205,19:49:54,"19:49:54,",Present
+152,STUDENT46,HC,ThirdFloor,304,19:51:26,"19:51:26,",Present
+153,STUDENT47,HD2,FifthFloor,507,19:51:22,"19:51:22,",Present
+154,STUDENT48,HD2,FifthFloor,507,19:23:01,"19:23:01,",Present
+155,STUDENT49,HC,ThirdFloor,302,19:22:57,"19:22:57,",Present
+156,STUDENT50,HD2,ThirdFloor,303,,,Not Present
+157,STUDENT51,HD2,ThirdFloor,307,19:53:48,"19:53:48,",Present
+158,STUDENT52,HD2,FourthFloor,401,,,Not Present
+159,STUDENT53,HD2,SecondFloor,205,,,Not Present
+160,STUDENT54,HC,ThirdFloor,308,19:37:00,"19:37:00,",Present
+161,STUDENT55,HD2,FourthFloor,408,,,Not Present
+162,STUDENT56,HD2,FifthFloor,503,19:54:14,"19:54:14,",Present
+163,STUDENT57,HC,SecondFloor,214,19:33:39,"19:33:39,",Present
+164,STUDENT58,HD2,ThirdFloor,307,19:50:39,"19:50:39,",Present
+165,STUDENT59,HD2,ThirdFloor,304,19:39:55,"19:39:55,",Present
+166,STUDENT60,HD2,FifthFloor,508,19:39:58,"19:39:58,",Present
+167,STUDENT61,HD2,FifthFloor,508,19:42:35,"19:42:35,",Present
+168,STUDENT62,HD2,FourthFloor,407,19:39:51,"19:39:51,",Present
+169,STUDENT63,HD2,ThirdFloor,303,19:31:10,"19:31:10,",Present
+170,STUDENT64,HD2,FourthFloor,407,,,Not Present
+171,STUDENT65,HD2,ThirdFloor,308,19:34:46,"19:34:46,",Present
+172,STUDENT66,HC,ThirdFloor,312,19:28:27,"19:28:27,",Present
+173,STUDENT67,HD2,FourthFloor,410,20:18:40,"20:18:40,",Present
+174,STUDENT68,HC,SecondFloor,213,20:29:24,"20:29:24,",Present
+175,STUDENT69,HD2,FifthFloor,504,20:26:24,"20:26:24,",Present
+176,STUDENT70,HD2,FourthFloor,404,20:29:28,"20:29:28,",Present
+177,STUDENT71,HC,ThirdFloor,306,19:51:32,"19:51:32,",Present
+178,STUDENT72,HC,ThirdFloor,307,19:49:47,"19:49:47,",Present
+179,STUDENT73,HD2,ThirdFloor,308,19:25:02,"19:25:02,",Present
+180,STUDENT74,HD2,ThirdFloor,308,19:24:59,"19:24:59,",Present
+181,STUDENT75,HD2,ThirdFloor,310,20:16:36,"20:16:36,",Present
+182,STUDENT76,HD2,FourthFloor,403,20:16:42,"20:16:42,",Present
+183,STUDENT77,HD2,ThirdFloor,307,20:08:34,"20:08:34,",Present
+184,STUDENT78,HD2,SecondFloor,204,20:08:25,"20:08:25,",Present
+186,STUDENT79,HC,SecondFloor,213,19:38:45,"19:38:45,19:28:52,",Present
+187,STUDENT80,HC,ThirdFloor,306,20:17:03,"20:17:03,",Present
+188,STUDENT81,HC,ThirdFloor,302,,,Not Present
+190,STUDENT82,HD2,FifthFloor,503,20:16:59,"20:16:59,",Present
+191,STUDENT83,HC,ThirdFloor,307,19:39:18,"19:39:18,",Present
+192,STUDENT84,HD2,FourthFloor,407,19:39:21,"19:39:21,",Present
+193,STUDENT85,HD2,FourthFloor,411,20:09:41,"20:09:41,",Present
+194,STUDENT86,HD2,FifthFloor,504,,,Not Present
+195,STUDENT87,HD2,ThirdFloor,301,19:47:43,"19:47:43,",Present
+196,STUDENT88,HB,SecondFloor,206,20:25:17,"20:25:17,",Present
+198,STUDENT89,HD2,FourthFloor,402,20:25:26,"20:25:26,",Present
+199,STUDENT90,HD2,FifthFloor,504,19:47:47,"19:47:47,",Present
+200,STUDENT91,HC,ThirdFloor,307,19:37:03,"19:37:03,",Present
+201,STUDENT92,HD2,ThirdFloor,304,20:05:25,"20:05:25,",Present
+202,STUDENT93,HC,ThirdFloor,305,19:33:43,"19:33:43,",Present
+203,STUDENT94,HC,ThirdFloor,308,20:06:04,"20:06:04,",Present
+204,STUDENT95,HC,GSSS-HOSTELS,311,19:56:09,"19:56:09,",Present
+205,STUDENT96,HD2,FourthFloor,408,19:56:06,"19:56:06,",Present
+206,STUDENT97,HD2,FourthFloor,402,19:37:38,"19:37:38,",Present
+207,STUDENT98,HC,ThirdFloor,312,19:56:14,"19:56:14,",Present
+208,STUDENT99,HD2,FourthFloor,401,20:12:39,"20:12:39,",Present
+207,STUDENT100,HD1,FirstFloor,401,20:12:45,"20:12:45,",Present
