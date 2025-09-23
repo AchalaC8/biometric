@@ -2,8 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 a=pd.read_csv(input("enter the file name"))
-b=a['Status'].value_counts()
-print(b)
 
 print('Total students')
 print(len(a))
