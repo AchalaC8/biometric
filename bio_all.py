@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import zipfile,os
-bio_zip=zipfile.ZipFile("ac_bio","w")
+import os
 j=1
 for i in os.listdir():
     if(i.endswith('.csv')):
@@ -20,6 +19,5 @@ for i in os.listdir():
         print('Students per room')
         print(a['Room No.'].value_counts())
 
-        print("\n\n\n")
         j+=1
 input()
