@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Analysis Script</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-    </style>
-</head>
-<body class="p-8">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-8 space-y-8">
-
-        <header class="text-center pb-4 border-b border-gray-200">
             <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Attendance Analysis Script</h1>
             <p class="text-lg text-gray-600">A utility for processing and visualizing attendance data from CSV files.</p>
         </header>
