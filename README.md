@@ -52,7 +52,7 @@
 
 <div>
     <h2>Example</h2>
-    <p>Assuming you have a CSV file named <code>attendance_data.csv</code>, the script's output would look similar to this:</p>
+    <p>Assuming you have a CSV file named <code>01-Jun-2025.csv</code>, the script's output would look similar to this:</p>
     <div>
         <pre>
 enter the file nameattendance_data.csv
