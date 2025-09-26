@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-a=pd.read_csv(input("enter the file name"))
+a=pd.read_csv(input("enter the file name")+".csv")
 
 print('Total students')
 print(len(a))
@@ -20,3 +20,4 @@ plt.ylabel('')
 plt.show()
 
 input()
+
