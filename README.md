@@ -38,3 +38,4 @@
 <li><strong>Daily Report Generation:</strong> The user inputs a file name (e.g., <code>01-Jun-2025</code>), the program reads the corresponding <code>.csv</code> file, runs the analysis, and provides a downloadable Excel file containing all the reports.</li>
 <li><strong>Monthly Visualization:</strong> The application automatically scans the directory for all available <code>.csv</code> files and compiles them to display a monthly attendance trend graph.</li>
 </ul>
+here is the graph
