@@ -39,5 +39,5 @@
 <li><strong>Monthly Visualization:</strong> The application automatically scans the directory for all available <code>.csv</code> files and compiles them to display a monthly attendance trend graph.</li>
 </ul>
 
-streak
+
 
