@@ -1,42 +1,63 @@
-<h1>Project Summary: Attendance Analysis Dashboard 📊</h1>
+
+
+<h1>Attendance Analysis Dashboard (Streamlit App)</h1>
+
+<p>This Streamlit application provides detailed daily and cumulative attendance analysis based on daily CSV reports (e.g., <code>DD-Mon-YYYY.csv</code> files) containing student attendance status.</p>
 
 <hr>
 
-<h2>Primary Objective</h2>
-<p>The project is an Attendance Analysis Dashboard built using Streamlit to process and analyze daily student attendance records from CSV files, providing both detailed daily reports and a visual monthly summary.</p>
-
-<hr>
-
-<h2>Key Technologies Used</h2>
+<h2>Prerequisites and Setup</h2>
 <ul>
-<li><strong>Streamlit:</strong> For creating the interactive web application interface.</li>
-<li><strong>Pandas:</strong> The core library for reading, manipulating, and analyzing the attendance data (DataFrames).</li>
-<li><strong>Matplotlib & NumPy:</strong> Used to generate the monthly comparative bar graph of present versus absent students.</li>
-<li><strong>Xlsxwriter:</strong> Employed within Pandas to create multi-sheet Excel reports for detailed daily analysis.</li>
+    <li>Python 3.x</li>
+    <li>Required libraries: <code>pandas</code>, <code>xlsxwriter</code>, <code>matplotlib</code>, <code>numpy</code>, <code>streamlit</code>.</li>
+    <li>Run the app using: <code>streamlit run your_script_name.py</code></li>
+    <li>Attendance CSV files must be in the same directory as the script.</li>
 </ul>
 
 <hr>
 
-<h2>Core Analysis Features</h2>
-<p>The program performs detailed analysis and generates several report sheets:</p>
-<ol>
-<li><strong>Daily Summary:</strong> Provides overall statistics, including total students, counts for 'Present', and counts for 'Not Present'.</li>
-<li><strong>Late Biometric Punches:</strong> Identifies and lists students whose 'Last Punch' time is later than 20:45:00, flagging them as late.</li>
-<li><strong>Students to Notify:</strong> Creates a sorted list of all students marked as 'Not Present'.</li>
-<li><strong>Per-Room Analysis:</strong> If block, floor, and room information is available, it generates summarized reports for:
-<ul>
-<li><strong>Present Students per Room:</strong> Counts and lists the names of present students, sorted by Block and Floor (following a specific floor order).</li>
-<li><strong>Absent Students per Room:</strong> Counts and lists the names of absent students, also sorted by Block and Floor.</li>
-</ul>
-</li>
-</ol>
+<h2>Supported Analysis Types</h2>
+
+<p>The sidebar allows you to switch between three main analysis modes:</p>
+
+<div class="feature">
+    <h3>1. Daily Attendance Report 🗓️</h3>
+    <p>Provides a comprehensive analysis for a <strong>single selected day</strong>.</p>
+    <ul>
+        <li><strong>Summary:</strong> Total, Present, and Absent counts.</li>
+        <li><strong>Late Biometric Punches:</strong> Lists students who punched in after <code>20:45:00</code> (configurable in <code>LATE_PUNCH_TIME_STR</code>).</li>
+        <li><strong>Students to Notify:</strong> A simple list of all students marked as 'Not Present'.</li>
+        <li><strong>Per Room Analysis:</strong> Separate reports for Present and Absent students, grouped and sorted by <strong>Block, Floor, and Room No.</strong></li>
+        <li><strong>Download:</strong> Exports all sub-reports into a single Excel file with multiple sheets.</li>
+    </ul>
+</div>
+
+<div class="feature">
+    <h3>2. Monthly Attendance Graph 📊</h3>
+    <p>Generates a bar chart showing the <strong>daily Present vs. Absent count trend</strong> across all days in the selected month, providing a high-level visual overview.</p>
+</div>
+
+<div class="feature">
+    <h3>3. Reduction Days Report ⭐ <span class="note">(Updated)</span></h3>
+    <p>Calculates the <strong>cumulative number of days a student was absent</strong> (renamed from 'Cumulative Absence' to <strong>'Reduction Days'</strong>) across <strong>all available attendance files</strong>.</p>
+    <h4>New Features: Location Filtering</h4>
+    <ul>
+        <li>The report now supports <strong>multi-select filtering</strong> in the sidebar.</li>
+        <li>Users can filter the results by one or more <strong>Block(s)</strong>, <strong>Floor(s)</strong>, and <strong>Room No(s)</strong>.</li>
+        <li>The report only displays students with a Reduction Days count greater than zero.</li>
+        <li>The final report is sorted by Block, custom Floor order, and Room No.</li>
+    </ul>
+</div>
 
 <hr>
 
-<h2>Application Workflow</h2>
+<h2>Key Code Constants</h2>
+
+<p>The following constants are used for configuration:</p>
 <ul>
-<li><strong>Daily Report Generation:</strong> The user inputs a file name (e.g., <code>01-Jun-2025</code>), the program reads the corresponding <code>.csv</code> file, runs the analysis, and provides a downloadable Excel file containing all the reports.</li>
-<li><strong>Monthly Visualization:</strong> The application automatically scans the directory for all available <code>.csv</code> files and compiles them to display a monthly attendance trend graph.</li>
+    <li><code>LATE_PUNCH_TIME_STR = '20:45:00'</code>: Defines the time considered "late" for the 'Late Biometric Punches' report.</li>
+    <li><code>FLOOR_ORDER = [...]</code>: A list defining the <strong>custom sort order</strong> for floors (e.g., 'FirstFloor' before 'SecondFloor').</li>
+    <li><code>DATE_FORMATS = [...]</code>: Multiple formats are supported to robustly parse dates from CSV filenames (e.g., '20-Jul-2025.csv').</li>
 </ul>
 
 
