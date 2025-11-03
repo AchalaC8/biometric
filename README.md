@@ -38,7 +38,7 @@
 </div>
 
 <div class="feature">
-    <h3>3. Reduction Days Report ⭐ <span class="note">(Updated)</span></h3>
+    <h3>3. Reduction Days Report ⭐ </h3>
     <p>Calculates the <strong>cumulative number of days a student was absent</strong> (renamed from 'Cumulative Absence' to <strong>'Reduction Days'</strong>) across <strong>all available attendance files</strong>.</p>
     <h4>New Features: Location Filtering</h4>
     <ul>
